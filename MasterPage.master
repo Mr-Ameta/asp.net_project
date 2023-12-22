@@ -1,24 +1,56 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <title>asp.net project</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link type="text/css" rel="Stylesheet" href="style/StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div class="header">
-        <asp:Image ID="Image1" runat="server" AlternateText="Atmiya University" ImageUrl="~/image/logo.png" ImageAlign="Middle" />
-        <asp:TextBox ID="TextBox1" runat="server">Atmiya University</asp:TextBox>
+        <asp:Image ID="Image1" runat="server" AlternateText="Atmiya University" ImageUrl="~/image/logo.png"
+            ImageAlign="Middle" CssClass="header_img" />
+        <asp:Label ID="Label1" runat="server" Text="Atmiya University" CssClass="header_text"></asp:Label>
     </div>
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
+    <div class="main_content">
+        <div class="navigation">
+            <nav class="nav-bar">
+            <div class="dropdown">
+              <div class="dropbtn">Chapter1</div>
+              <div class="dropdown-content">
+                <a href="chapter1/exercise_1.aspx">Exercise 1</a>
+                
+               </div>
+            </div><div class="dropdown">
+              <div class="dropbtn">Chapter2</div>
+              <div class="dropdown-content">
+               </div>
+            </div><div class="dropdown">
+              <div class="dropbtn">Chapter3</div>
+              <div class="dropdown-content">
+               </div>
+            </div>
+            <div class="dropdown">
+            <div class="dropbtn">Chapter4</div>
+              <div class="dropdown-content">
+               </div>
+            </div>
+            <div class="dropdown">
+              <div class="dropbtn">Chapter5</div>
+              <div class="dropdown-content">
+               </div>
+            </div>
+            </nav>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
+    <footer class="footer">
+        CopyRight <sup>&copy</sup> & All Right Reserved
+    </footer>
     </form>
 </body>
 </html>
